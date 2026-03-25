@@ -100,4 +100,56 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Location Pages - Tier 2 -->
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-garden-city-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-great-neck-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-manhasset-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-rockville-centre-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-mineola-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-port-washington-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-syosset-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-jericho-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-roslyn-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dcncny.com/locations/duct-cleaning-glen-cove-ny.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
