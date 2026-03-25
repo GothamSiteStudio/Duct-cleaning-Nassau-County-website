@@ -903,6 +903,17 @@ details[open] .faq-question::after {
   opacity: 0.5;
 }
 
+.footer-bottom a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-bottom a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 /* ===== Phone CTA (Sticky Mobile) ===== */
 .phone-cta {
   display: none;
