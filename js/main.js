@@ -4,20 +4,68 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
+  function closeMenu() {
+    navMenu.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    menuToggle.focus();
+  }
+
+  function openMenu() {
+    navMenu.classList.add('active');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    // Focus first link inside menu
+    var firstLink = navMenu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', function () {
-      const isOpen = navMenu.classList.toggle('active');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      var isOpen = navMenu.classList.contains('active');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     // Close menu when a nav link is clicked
     navMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        navMenu.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        closeMenu();
       });
+    });
+
+    // Close menu with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    // Focus trap inside mobile menu
+    navMenu.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var focusable = navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length === 0) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+
+      // Include the menu toggle button in the trap
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        menuToggle.focus();
+      }
+    });
+
+    // When on toggle button and tab forward, go into menu
+    menuToggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' && !e.shiftKey && navMenu.classList.contains('active')) {
+        e.preventDefault();
+        var firstLink = navMenu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
   }
 
