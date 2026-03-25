@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navMenu.classList.remove('active');
     menuToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (header) header.classList.remove('menu-open');
     menuToggle.focus();
   }
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navMenu.classList.add('active');
     menuToggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    if (header) header.classList.add('menu-open');
     // Focus first link inside menu
     var firstLink = navMenu.querySelector('a');
     if (firstLink) firstLink.focus();
