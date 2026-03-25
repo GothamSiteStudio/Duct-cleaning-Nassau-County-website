@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
       var scrollY = window.scrollY;
       if (scrollY > 60) {
-        header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
       } else {
-        header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08)';
+        header.style.boxShadow = 'none';
       }
       lastScroll = scrollY;
     }, { passive: true });

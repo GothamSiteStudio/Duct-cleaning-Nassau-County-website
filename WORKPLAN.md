@@ -10,7 +10,10 @@
 | **Email** | info@dcncny.com |
 | **Hours** | Sun-Fri 9AM-6PM / Sat Closed |
 | **Lovable Site** | https://ymervices.lovable.app |
-| **Existing Site** | https://www.dcncny.com |
+| **Existing Site** | https://www.dcncny.com (Wix, old) |
+| **New Domain** | Dcncny.com (Namecheap) |
+| **Hosting** | GitHub Pages |
+| **Repo** | github.com/GothamSiteStudio/Duct-cleaning-Nassau-County-website |
 | **Parent Brand** | Y&M Service (CT + NY) |
 | **License** | HIC #0660487 |
 
@@ -47,7 +50,7 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 
 ## STILL NEEDED FROM MATI
 - [ ] **Photos** - real job photos, team, van/truck, before & after shots
-- [ ] **Confirm domain** - use dcncny.com or new domain?
+- [x] **Domain confirmed** - Dcncny.com (Namecheap, hosted on GitHub Pages)
 
 ---
 
@@ -369,9 +372,11 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - **Schema markup**: LocalBusiness, Service, FAQ, BreadcrumbList, Review
 
 ### Hosting & Domain
-- [ ] Confirm domain (dcncny.com or new Nassau-specific domain)
-- [ ] Hosting: Cloudflare Pages or Netlify (static, fast, free SSL)
-- [ ] CDN: Auto with Cloudflare/Netlify
+- [x] Domain: Dcncny.com (Namecheap)
+- [x] Hosting: GitHub Pages
+- [x] Repo: github.com/GothamSiteStudio/Duct-cleaning-Nassau-County-website
+- [ ] Configure Namecheap DNS to point to GitHub Pages
+- [ ] Enable HTTPS via GitHub Pages custom domain settings
 
 ---
 

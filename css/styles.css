@@ -1,5 +1,6 @@
 /* ============================================
    Duct Cleaning Nassau County - Complete Styles
+   Dark theme - Logo-matched color palette
    Mobile-first responsive design
    ============================================ */
 
@@ -11,24 +12,33 @@
 }
 
 :root {
+  /* Dark theme palette - matched to logo */
+  --bg-body: #030918;
+  --bg-elevated: #081028;
+  --bg-surface: #0D1735;
+  --bg-surface-hover: #132148;
   --primary-dark: #0C1B33;
-  --primary: #1A3A5C;
-  --primary-light: #2980B9;
-  --accent: #E8871E;
-  --accent-hover: #D47516;
-  --teal: #1ABC9C;
+  --primary: #1E3A5F;
+  --primary-light: #60A5FA;
+  --accent: #38BDF8;
+  --accent-hover: #0EA5E9;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --teal: #2DD4BF;
   --white: #FFFFFF;
-  --off-white: #F5F7FA;
-  --light-gray: #E8ECF1;
-  --dark: #1A1A2E;
-  --text: #2D3748;
-  --text-light: #718096;
-  --text-white: rgba(255,255,255,0.85);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --shadow: 0 4px 12px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
-  --radius: 8px;
-  --radius-lg: 12px;
+  --off-white: #081028;
+  --light-gray: rgba(255,255,255,0.08);
+  --dark: #020714;
+  --text: #E2E8F0;
+  --text-light: #94A3B8;
+  --text-white: rgba(255,255,255,0.9);
+  --border: rgba(255,255,255,0.06);
+  --border-light: rgba(255,255,255,0.10);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.08);
+  --radius: 10px;
+  --radius-lg: 16px;
   --max-width: 1200px;
   --transition: 0.3s ease;
 }
@@ -42,7 +52,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   line-height: 1.7;
-  background: var(--white);
+  background: var(--bg-body);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -68,7 +78,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  color: var(--primary-dark);
+  color: var(--white);
 }
 
 /* Utility */
@@ -83,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-alt {
-  background: var(--off-white);
+  background: var(--bg-elevated);
 }
 
 .text-center {
@@ -118,10 +128,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Top Bar ===== */
 .top-bar {
-  background: var(--primary-dark);
-  color: var(--text-white);
+  background: var(--dark);
+  color: var(--text-light);
   font-size: 0.8rem;
   padding: 8px 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .top-bar-inner {
@@ -133,11 +144,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-bar-text {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .top-bar-phone {
-  color: var(--white);
+  color: var(--accent);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -145,13 +156,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-bar-phone:hover {
-  color: var(--accent);
+  color: var(--white);
 }
 
 /* ===== Header / Navigation ===== */
 .header {
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
+  background: rgba(3, 9, 24, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -165,9 +178,24 @@ h1, h2, h3, h4, h5, h6 {
   gap: 24px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .logo img {
-  height: 50px;
+  height: 80px;
   width: auto;
+}
+
+.logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .nav-list {
@@ -180,15 +208,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 16px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-light);
   border-radius: var(--radius);
   transition: all var(--transition);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary-light);
-  background: rgba(41, 128, 185, 0.06);
+  color: var(--white);
+  background: rgba(56, 189, 248, 0.08);
 }
 
 .header-cta {
@@ -207,7 +235,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius);
   min-width: 240px;
@@ -223,12 +252,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: 10px 20px;
   font-size: 0.875rem;
-  color: var(--text);
+  color: var(--text-light);
 }
 
 .dropdown-menu a:hover {
-  background: var(--off-white);
-  color: var(--primary-light);
+  background: var(--bg-surface-hover);
+  color: var(--accent);
 }
 
 /* Mobile Menu Toggle */
@@ -246,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--primary-dark);
+  background: var(--text);
   transition: var(--transition);
 }
 
@@ -277,45 +306,59 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--white);
+  color: var(--dark);
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: var(--white);
+  color: var(--dark);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
 }
 
 .btn-secondary {
-  background: var(--white);
-  color: var(--primary-dark);
-  border: 2px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.3);
 }
 
 .btn-secondary:hover {
-  background: transparent;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.5);
   color: var(--white);
 }
 
 .btn-white {
   background: var(--white);
-  color: var(--primary-dark);
+  color: var(--dark);
 }
 
 .btn-white:hover {
-  background: var(--off-white);
-  color: var(--primary-dark);
+  background: var(--text);
+  color: var(--dark);
 }
 
 /* ===== Hero ===== */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #1a5276 100%);
+  background: linear-gradient(160deg, #020714 0%, #081028 30%, #0D1B40 60%, #132855 100%);
   color: var(--white);
   padding: 100px 0 80px;
   min-height: 520px;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .hero-overlay {
@@ -331,12 +374,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
+  color: var(--accent);
   margin-bottom: 20px;
   backdrop-filter: blur(4px);
 }
@@ -379,8 +423,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Trust Bar ===== */
 .trust-bar {
-  background: var(--white);
-  border-bottom: 1px solid var(--light-gray);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
   padding: 20px 0;
 }
 
@@ -400,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 .trust-item strong {
   display: block;
   font-size: 0.9rem;
-  color: var(--primary-dark);
+  color: var(--white);
 }
 
 .trust-item span {
@@ -416,7 +460,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-  background: var(--white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -428,7 +473,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card:hover {
-  box-shadow: var(--shadow-lg);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: var(--shadow-glow);
   transform: translateY(-4px);
   color: inherit;
 }
@@ -480,19 +526,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   min-height: 200px;
-  background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-surface) 100%);
   color: var(--text-light);
   font-size: 0.8rem;
   font-weight: 500;
 }
 
 .img-placeholder svg {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .img-placeholder-lg {
   min-height: 400px;
   border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
 }
 
 /* ===== Health / Why Clean Grid ===== */
@@ -503,16 +550,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .health-card {
-  background: var(--white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   text-align: center;
-  box-shadow: var(--shadow-sm);
   transition: all var(--transition);
 }
 
 .health-card:hover {
-  box-shadow: var(--shadow);
+  border-color: rgba(56, 189, 248, 0.15);
+  box-shadow: var(--shadow-glow);
   transform: translateY(-3px);
 }
 
@@ -561,7 +609,7 @@ h1, h2, h3, h4, h5, h6 {
 .why-us-list li strong {
   display: block;
   font-size: 1rem;
-  color: var(--primary-dark);
+  color: var(--white);
   margin-bottom: 4px;
 }
 
@@ -578,21 +626,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-card {
-  background: var(--white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px;
-  box-shadow: var(--shadow-sm);
 }
 
 .review-stars {
-  color: #F59E0B;
+  color: #FBBF24;
   font-size: 1.2rem;
   margin-bottom: 12px;
 }
 
 .review-text {
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--text-light);
   font-style: italic;
   margin-bottom: 16px;
 }
@@ -600,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
 .review-author {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--white);
 }
 
 /* ===== Service Areas ===== */
@@ -612,19 +660,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .area-group h3 {
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--accent);
   margin-bottom: 12px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid rgba(56, 189, 248, 0.2);
 }
 
 .area-group ul li {
   padding: 4px 0;
   font-size: 0.9rem;
+  color: var(--text-light);
 }
 
 .area-group ul li a {
-  color: var(--text);
+  color: var(--text-light);
 }
 
 .area-group ul li a:hover {
@@ -638,10 +687,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-item {
-  background: var(--white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   margin-bottom: 12px;
-  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
@@ -650,7 +699,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 24px;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--white);
   cursor: pointer;
   list-style: none;
 }
@@ -686,8 +735,10 @@ details[open] .faq-question::after {
 
 /* ===== CTA Section ===== */
 .cta-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(160deg, #081028 0%, #0D1B40 50%, #132855 100%);
   color: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .cta-section h2 {
@@ -697,7 +748,7 @@ details[open] .faq-question::after {
 }
 
 .cta-section p {
-  color: var(--text-white);
+  color: var(--text-light);
   max-width: 600px;
   margin: 0 auto 32px;
   font-size: 1.05rem;
@@ -706,14 +757,15 @@ details[open] .faq-question::after {
 .cta-hours {
   margin-top: 24px;
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 /* ===== Footer ===== */
 .footer {
-  background: var(--primary-dark);
-  color: var(--text-white);
+  background: var(--dark);
+  color: var(--text-light);
   padding: 60px 0 20px;
+  border-top: 1px solid var(--border);
 }
 
 .footer-grid {
@@ -721,14 +773,13 @@ details[open] .faq-question::after {
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-logo {
-  height: 45px;
+  height: 60px;
   width: auto;
   margin-bottom: 16px;
-  filter: brightness(0) invert(1);
 }
 
 .footer-col p {
@@ -747,7 +798,7 @@ details[open] .faq-question::after {
 }
 
 .footer-col ul li a {
-  color: var(--text-white);
+  color: var(--text-light);
   font-size: 0.9rem;
 }
 
@@ -762,7 +813,7 @@ details[open] .faq-question::after {
 }
 
 .footer-social a {
-  color: var(--text-white);
+  color: var(--text-light);
   transition: color var(--transition);
 }
 
@@ -774,7 +825,7 @@ details[open] .faq-question::after {
   text-align: center;
   padding-top: 20px;
   font-size: 0.8rem;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 /* ===== Phone CTA (Sticky Mobile) ===== */
@@ -784,10 +835,11 @@ details[open] .faq-question::after {
 
 /* ===== PAGE-SPECIFIC: About, Contact, Service, Location ===== */
 .page-hero {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(160deg, #020714 0%, #081028 40%, #0D1B40 100%);
   color: var(--white);
   padding: 100px 0 60px;
   text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 
 .page-hero h1 {
@@ -796,7 +848,7 @@ details[open] .faq-question::after {
 }
 
 .page-hero p {
-  color: var(--text-white);
+  color: var(--text-light);
   max-width: 600px;
   margin: 12px auto 0;
   font-size: 1.05rem;
@@ -834,7 +886,7 @@ details[open] .faq-question::after {
 
 .content-block p {
   margin-bottom: 16px;
-  color: var(--text);
+  color: var(--text-light);
 }
 
 .content-block ul {
@@ -845,7 +897,7 @@ details[open] .faq-question::after {
 
 .content-block ul li {
   margin-bottom: 8px;
-  color: var(--text);
+  color: var(--text-light);
 }
 
 /* Two-column layout for service/about pages */
@@ -870,7 +922,7 @@ details[open] .faq-question::after {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 6px;
-  color: var(--primary-dark);
+  color: var(--white);
 }
 
 .form-group input,
@@ -880,9 +932,10 @@ details[open] .faq-question::after {
   padding: 12px 16px;
   font-size: 0.95rem;
   font-family: inherit;
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius);
-  background: var(--white);
+  background: var(--bg-surface);
+  color: var(--text);
   transition: border-color var(--transition);
 }
 
@@ -890,13 +943,18 @@ details[open] .faq-question::after {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-light);
-  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
 }
 
 .form-group textarea {
   min-height: 120px;
   resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-light);
 }
 
 /* Contact grid */
@@ -908,7 +966,8 @@ details[open] .faq-question::after {
 }
 
 .contact-info-card {
-  background: var(--off-white);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   padding: 32px;
   border-radius: var(--radius-lg);
 }
@@ -932,14 +991,14 @@ details[open] .faq-question::after {
 
 .contact-info-item strong {
   display: block;
-  color: var(--primary-dark);
+  color: var(--white);
   margin-bottom: 2px;
 }
 
 .contact-info-item span,
 .contact-info-item a {
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--text-light);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -972,7 +1031,7 @@ details[open] .faq-question::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--white);
+    background: var(--bg-body);
     z-index: 300;
     padding: 80px 24px 24px;
     overflow-y: auto;
@@ -988,12 +1047,13 @@ details[open] .faq-question::after {
   .nav-link {
     padding: 16px 0;
     font-size: 1.1rem;
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--border);
   }
 
   .dropdown-menu {
     position: static;
     box-shadow: none;
+    border: none;
     padding: 0 0 0 16px;
     display: block;
   }
@@ -1003,6 +1063,10 @@ details[open] .faq-question::after {
   .menu-toggle {
     display: flex;
     z-index: 400;
+  }
+
+  .logo img {
+    height: 60px;
   }
 
   .hero {
@@ -1060,7 +1124,7 @@ details[open] .faq-question::after {
     right: 0;
     z-index: 1000;
     background: var(--accent);
-    color: var(--white);
+    color: var(--dark);
     text-align: center;
     padding: 16px;
     font-size: 1.1rem;
@@ -1069,7 +1133,7 @@ details[open] .faq-question::after {
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 -2px 20px rgba(0,0,0,0.4);
   }
 }
 
