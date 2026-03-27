@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice - Duct Cleaning Nassau County</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 11.5px;
+      color: #1a1a1a;
+      background: #f0f0f0;
+      line-height: 1.35;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: auto;
+      margin: 0.25in auto;
+      background: #fff;
+      padding: 0.3in 0.45in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Top Header ---- */
+    .invoice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .invoice-title {
+      text-align: right;
+    }
+
+    .invoice-title h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #040A24;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+
+    .invoice-title .inv-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      height: 64px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    .brand-info h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #040A24;
+      margin-bottom: 1px;
+    }
+
+    .brand-info p {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    /* ---- Meta Row ---- */
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      background: #f4f6f9;
+      border: 1px solid #dde1e8;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    .meta-row .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-row .meta-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .meta-row .meta-value {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .meta-row .balance-due {
+      text-align: right;
+    }
+
+    .meta-row .balance-due .meta-value {
+      font-size: 16px;
+      color: #040A24;
+    }
+
+    /* ---- FROM / TO / JOB LOCATION ---- */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .info-block h3 {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #fff;
+      background: #040A24;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .info-block p {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .info-block .name {
+      font-weight: 700;
+      font-size: 11px;
+      color: #1a1a1a;
+    }
+
+    /* ---- Services Table ---- */
+    .services-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 4px;
+    }
+
+    .services-table thead th {
+      background: #040A24;
+      color: #fff;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 6px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .services-table thead th.r {
+      text-align: right;
+    }
+
+    .services-table thead th.c {
+      text-align: center;
+    }
+
+    .services-table tbody td {
+      padding: 4px 6px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 11px;
+      vertical-align: top;
+      height: 22px;
+    }
+
+    .services-table tbody td.r {
+      text-align: right;
+    }
+
+    .services-table tbody td.c {
+      text-align: center;
+    }
+
+    .services-table tbody tr:nth-child(even) {
+      background: #fafbfc;
+    }
+
+    .services-table .service-name {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .services-table .service-desc {
+      font-size: 11px;
+      color: #666;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* ---- Totals ---- */
+    .totals-section {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+
+    .totals-table {
+      min-width: 300px;
+      border-collapse: collapse;
+    }
+
+    .totals-table td {
+      padding: 3px 10px;
+      font-size: 11px;
+    }
+
+    .totals-table td:first-child {
+      font-weight: 600;
+      text-align: right;
+      color: #555;
+    }
+
+    .totals-table td:last-child {
+      text-align: right;
+      min-width: 90px;
+    }
+
+    .totals-table tr.subtotal-row td {
+      border-top: 1px solid #ddd;
+    }
+
+    .totals-table tr.grand-total td {
+      font-size: 13px;
+      font-weight: 800;
+      color: #040A24;
+      border-top: 2px solid #040A24;
+      border-bottom: 2px solid #040A24;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background: #f4f6f9;
+    }
+
+    .totals-table tr.payment-row td {
+      color: #2e7d32;
+      font-size: 12px;
+    }
+
+    .totals-table tr.balance-row td {
+      font-weight: 800;
+      font-size: 12px;
+      color: #040A24;
+      border-top: 1px solid #ccc;
+      padding-top: 6px;
+    }
+
+    /* ---- Footer sections ---- */
+    .footer-sections {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-block h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #040A24;
+      font-weight: 700;
+      margin-bottom: 4px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .footer-block p {
+      font-size: 10.5px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .payment-badges {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .payment-badge {
+      background: #e8eef4;
+      color: #333;
+      border: 1px solid #c8d4e0;
+      border-radius: 4px;
+      padding: 3px 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .signature-row {
+      display: flex;
+      gap: 0.5in;
+      margin-top: 10px;
+      padding-top: 6px;
+    }
+
+    .sig-block {
+      flex: 1;
+    }
+
+    .sig-block .sig-line {
+      border-bottom: 1px solid #555;
+      height: 20px;
+      margin-bottom: 3px;
+    }
+
+    .sig-block p {
+      font-size: 10px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .license-line {
+      text-align: center;
+      font-size: 9px;
+      color: #888;
+      margin-top: 6px;
+    }
+
+    .terms-text {
+      font-size: 8.5px;
+      color: #888;
+      line-height: 1.3;
+    }
+
+    /* ===== Print ===== */
+    @media print {
+      body { background: #fff; margin: 0; padding: 0; }
+      .page { margin: 0; padding: 0.25in 0.4in; width: 100%; min-height: auto; box-shadow: none; }
+      .no-print { display: none !important; }
+    }
+
+    .no-print {
+      text-align: center;
+      margin: 16px auto;
+    }
+
+    .no-print button {
+      background: #040A24;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    .no-print button:hover {
+      background: #0d1735;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button onclick="window.print()">Print Invoice / Save as PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <div class="invoice-header">
+      <div class="brand">
+        <img src="images/logo-bg.png" alt="Duct Cleaning Nassau County Logo">
+        <div class="brand-info">
+          <h2>Duct Cleaning Nassau County</h2>
+          <p>
+            Nassau County, NY<br>
+            Email: info@dcncny.com<br>
+            Phone: (516) 324-8078<br>
+            www.dcncny.com
+          </p>
+        </div>
+      </div>
+      <div class="invoice-title">
+        <h1>Invoice</h1>
+        <p class="inv-number"># INV-__________</p>
+      </div>
+    </div>
+
+    <!-- ===== Meta Row ===== -->
+    <div class="meta-row">
+      <div class="meta-item">
+        <span class="meta-label">Date Issued</span>
+        <span class="meta-value">___/___/______</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Date Due</span>
+        <span class="meta-value">Due on Receipt</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Type</span>
+        <span class="meta-value">______________</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Check Payable To</span>
+        <span class="meta-value">Duct Cleaning Nassau County</span>
+      </div>
+      <div class="meta-item balance-due">
+        <span class="meta-label">Balance Due</span>
+        <span class="meta-value">$_______</span>
+      </div>
+    </div>
+
+    <!-- ===== FROM / TO / JOB ===== -->
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>From</h3>
+        <p>
+          <span class="name">Duct Cleaning Nassau County</span><br>
+          Nassau County, NY<br>
+          info@dcncny.com<br>
+          (516) 324-8078
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>To</h3>
+        <p>
+          <span class="name">Name: ________________________</span><br>
+          Phone: ________________________<br>
+          Email: ________________________
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>Job Location</h3>
+        <p>
+          Address: ________________________<br>
+          City: _______________ State: ____<br>
+          Zip: __________
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== Services Table ===== -->
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th style="width:5%">#</th>
+          <th style="width:35%">Services</th>
+          <th class="c" style="width:8%">Qty</th>
+          <th class="r" style="width:13%">Price</th>
+          <th class="r" style="width:13%">Discount</th>
+          <th class="c" style="width:12%">Tax</th>
+          <th class="r" style="width:14%">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>2</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>3</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>4</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>5</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>6</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>7</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+        <tr><td>8</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ===== Totals ===== -->
+    <div class="totals-section">
+      <table class="totals-table">
+        <tr class="subtotal-row"><td>Subtotal</td><td>$_______</td></tr>
+        <tr class="grand-total"><td>Grand Total ($)</td><td>$_______</td></tr>
+        <tr class="payment-row"><td>Payment via _______________</td><td>(-) $_______</td></tr>
+        <tr class="balance-row"><td>Balance Due</td><td>$_______</td></tr>
+      </table>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <div class="footer-sections">
+      <div class="footer-block">
+        <h3>Accepted Payment Methods</h3>
+        <div class="payment-badges">
+          <span class="payment-badge">Cash</span>
+          <span class="payment-badge">Check</span>
+          <span class="payment-badge">Credit Card</span>
+          <span class="payment-badge">Zelle</span>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3>Message</h3>
+        <p>Thank you for your business.</p>
+      </div>
+
+      <div class="signature-row">
+        <div class="sig-block">
+          <div class="sig-line"></div>
+          <p>Customer Signature</p>
+        </div>
+        <div class="sig-block">
+          <div class="sig-line"></div>
+          <p>Technician Signature</p>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3>Terms</h3>
+        <p class="terms-text">Payment Terms: All invoices for services covered by the estimate are payable upon completion of work or date stated on the invoice. We accept all major credit cards. Late Charges: Any invoices not paid by you on the date of completion may bear interest after the due date until the invoice is paid. There will be a $25 return check fee.</p>
+      </div>
+    </div>
+
+    <p class="license-line">Licensed &amp; Insured - HIC #0660487 - Duct Cleaning Nassau County</p>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard - Duct Cleaning Nassau County</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-body: #030918;
+      --bg-surface: #0D1735;
+      --bg-elevated: #081028;
+      --bg-surface-hover: #132148;
+      --accent: #38BDF8;
+      --accent-hover: #0EA5E9;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --text: #E2E8F0;
+      --text-light: #94A3B8;
+      --border: rgba(255,255,255,0.06);
+      --border-light: rgba(255,255,255,0.10);
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-body);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .topbar-brand img {
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    .topbar-brand h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .topbar-brand span {
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--accent-glow);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .user-email {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .btn-logout {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-light);
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    .btn-logout:hover {
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #FCA5A5;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    /* Main content */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    .welcome {
+      margin-bottom: 32px;
+    }
+
+    .welcome h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .welcome p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* Dashboard cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .dash-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: all 0.25s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .dash-card:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    .dash-card .card-icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .dash-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .dash-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .dash-card .card-badge {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-active {
+      background: rgba(45, 212, 191, 0.15);
+      color: #2DD4BF;
+    }
+
+    .badge-soon {
+      background: rgba(148, 163, 184, 0.15);
+      color: #94A3B8;
+    }
+
+    /* Recent invoices section */
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--bg-surface);
+      border: 1px dashed var(--border-light);
+      border-radius: var(--radius-lg);
+      color: var(--text-light);
+    }
+
+    .empty-state p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #030918;
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Invoices table */
+    .invoices-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+
+    .invoices-table thead th {
+      background: var(--bg-elevated);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .invoices-table tbody td {
+      padding: 10px 14px;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .invoices-table tbody tr:hover {
+      background: var(--bg-surface-hover);
+    }
+
+    .invoices-table .status-paid {
+      color: #2DD4BF;
+      font-weight: 600;
+    }
+
+    .invoices-table .status-pending {
+      color: #FBBF24;
+      font-weight: 600;
+    }
+
+    .invoices-table .btn-view {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
+
+    .invoices-table .btn-view:hover {
+      text-decoration: underline;
+    }
+
+    /* Loading state */
+    .loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-body);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loading-overlay.hidden { display: none; }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border-light);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 600px) {
+      .topbar { padding: 10px 14px; }
+      .topbar-brand h1 { font-size: 14px; }
+      .user-email { display: none; }
+      .main { padding: 20px 14px; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading overlay (until auth check) -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-brand">
+      <img src="../images/logo-bg.png" alt="Logo">
+      <h1>Admin Panel <span>Dashboard</span></h1>
+    </div>
+    <div class="topbar-actions">
+      <span class="user-email" id="userEmail"></span>
+      <button class="btn-logout" id="btnLogout">Sign Out</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <div class="welcome">
+      <h2>Welcome back</h2>
+      <p>Manage invoices, customers, and your business from one place.</p>
+    </div>
+
+    <!-- Tools grid -->
+    <div class="cards-grid">
+      <a href="create-invoice.html" class="dash-card">
+        <span class="card-icon">&#128196;</span>
+        <h3>Create Invoice</h3>
+        <p>Generate a professional invoice for a customer with automatic tax calculation.</p>
+        <span class="card-badge badge-active">Active</span>
+      </a>
+
+      <div class="dash-card" style="cursor: default; opacity: 0.6;">
+        <span class="card-icon">&#128101;</span>
+        <h3>Customers</h3>
+        <p>View and manage your customer database, contact info, and job history.</p>
+        <span class="card-badge badge-soon">Coming Soon</span>
+      </div>
+
+      <div class="dash-card" style="cursor: default; opacity: 0.6;">
+        <span class="card-icon">&#128200;</span>
+        <h3>Estimates</h3>
+        <p>Create and send job estimates to potential customers before the work begins.</p>
+        <span class="card-badge badge-soon">Coming Soon</span>
+      </div>
+
+      <div class="dash-card" style="cursor: default; opacity: 0.6;">
+        <span class="card-icon">&#128188;</span>
+        <h3>Employees</h3>
+        <p>Manage your team, assign jobs, and track technician schedules.</p>
+        <span class="card-badge badge-soon">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Recent invoices -->
+    <h3 class="section-title">Recent Invoices</h3>
+    <div id="recentInvoices">
+      <div class="empty-state" id="emptyState">
+        <p>No invoices yet. Create your first one!</p>
+        <a href="create-invoice.html" class="btn-primary">Create Invoice</a>
+      </div>
+      <table class="invoices-table" id="invoicesTable" style="display: none;">
+        <thead>
+          <tr>
+            <th>Invoice #</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="invoicesBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js?v=3"></script>
+  <script src="js/auth.js?v=3"></script>
+  <script>
+    (async function init() {
+      // Auth guard
+      const user = await AUTH.requireAuth();
+      if (!user) return;
+
+      // Show page
+      document.getElementById('loadingOverlay').classList.add('hidden');
+      document.getElementById('userEmail').textContent = user.email;
+
+      // Logout
+      document.getElementById('btnLogout').addEventListener('click', () => AUTH.logout());
+
+      // Load recent invoices
+      try {
+        const { data: invoices, error } = await db
+          .from('invoices')
+          .select('*, customers(name)')
+          .order('created_at', { ascending: false })
+          .limit(10);
+
+        if (error) throw error;
+
+        if (invoices && invoices.length > 0) {
+          document.getElementById('emptyState').style.display = 'none';
+          const table = document.getElementById('invoicesTable');
+          table.style.display = 'table';
+          const tbody = document.getElementById('invoicesBody');
+
+          invoices.forEach(inv => {
+            const tr = document.createElement('tr');
+            const statusClass = inv.status === 'paid' ? 'status-paid' : 'status-pending';
+            tr.innerHTML = `
+              <td>#${inv.invoice_number}</td>
+              <td>${inv.customers?.name || 'N/A'}</td>
+              <td>${new Date(inv.date_issued).toLocaleDateString()}</td>
+              <td>$${Number(inv.total).toFixed(2)}</td>
+              <td class="${statusClass}">${inv.status}</td>
+              <td><button class="btn-view" onclick="viewInvoice('${inv.id}')">View</button></td>
+            `;
+            tbody.appendChild(tr);
+          });
+        }
+      } catch (e) {
+        // Table may not exist yet, that's ok on first setup
+        console.log('Could not load invoices:', e.message);
+      }
+    })();
+
+    function viewInvoice(id) {
+      window.location.href = `invoice-preview.html?id=${encodeURIComponent(id)}`;
+    }
+  </script>
+
+</body>
+</html>

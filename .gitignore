@@ -10,3 +10,6 @@ desktop.ini
 
 # Build
 node_modules/
+
+# Playwright MCP
+.playwright-mcp/

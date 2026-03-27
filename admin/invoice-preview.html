@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Invoice - Duct Cleaning Nassau County</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 11.5px;
+      color: #1a1a1a;
+      background: #f0f0f0;
+      line-height: 1.35;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: auto;
+      margin: 0.25in auto;
+      background: #fff;
+      padding: 0.3in 0.45in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Top Header ---- */
+    .invoice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .invoice-title { text-align: right; }
+
+    .invoice-title h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #040A24;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+
+    .invoice-title .inv-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      height: 64px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    .brand-info h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #040A24;
+      margin-bottom: 1px;
+    }
+
+    .brand-info p {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    /* ---- Meta Row ---- */
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      background: #f4f6f9;
+      border: 1px solid #dde1e8;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    .meta-row .meta-item { display: flex; flex-direction: column; }
+
+    .meta-row .meta-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .meta-row .meta-value { font-weight: 700; color: #1a1a1a; }
+
+    .meta-row .balance-due { text-align: right; }
+    .meta-row .balance-due .meta-value { font-size: 16px; color: #040A24; }
+
+    /* ---- FROM / TO / JOB LOCATION ---- */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .info-block h3 {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #fff;
+      background: #040A24;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .info-block p { font-size: 11px; line-height: 1.5; color: #333; }
+    .info-block .name { font-weight: 700; font-size: 11px; color: #1a1a1a; }
+
+    /* ---- Services Table ---- */
+    .services-table { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
+
+    .services-table thead th {
+      background: #040A24;
+      color: #fff;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 6px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .services-table thead th.r { text-align: right; }
+    .services-table thead th.c { text-align: center; }
+
+    .services-table tbody td {
+      padding: 4px 6px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 11px;
+      vertical-align: top;
+      height: 22px;
+    }
+
+    .services-table tbody td.r { text-align: right; }
+    .services-table tbody td.c { text-align: center; }
+    .services-table tbody tr:nth-child(even) { background: #fafbfc; }
+    .services-table .service-name { font-weight: 700; color: #1a1a1a; }
+
+    /* ---- Totals ---- */
+    .totals-section { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+
+    .totals-table { min-width: 300px; border-collapse: collapse; }
+    .totals-table td { padding: 3px 10px; font-size: 11px; }
+    .totals-table td:first-child { font-weight: 600; text-align: right; color: #555; }
+    .totals-table td:last-child { text-align: right; min-width: 90px; }
+    .totals-table tr.subtotal-row td { border-top: 1px solid #ddd; }
+
+    .totals-table tr.grand-total td {
+      font-size: 13px;
+      font-weight: 800;
+      color: #040A24;
+      border-top: 2px solid #040A24;
+      border-bottom: 2px solid #040A24;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background: #f4f6f9;
+    }
+
+    .totals-table tr.payment-row td { color: #2e7d32; font-size: 12px; }
+
+    .totals-table tr.balance-row td {
+      font-weight: 800;
+      font-size: 12px;
+      color: #040A24;
+      border-top: 1px solid #ccc;
+      padding-top: 6px;
+    }
+
+    /* ---- Footer sections ---- */
+    .footer-sections {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-block h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #040A24;
+      font-weight: 700;
+      margin-bottom: 4px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .footer-block p { font-size: 10.5px; color: #444; line-height: 1.4; }
+
+    .payment-badges { display: flex; gap: 10px; margin-top: 4px; }
+
+    .payment-badge {
+      background: #e8eef4;
+      color: #333;
+      border: 1px solid #c8d4e0;
+      border-radius: 4px;
+      padding: 3px 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .signature-row {
+      display: flex;
+      gap: 0.5in;
+      margin-top: 10px;
+      padding-top: 6px;
+    }
+
+    .sig-block { flex: 1; }
+    .sig-block .sig-line { border-bottom: 1px solid #555; height: 20px; margin-bottom: 3px; }
+    .sig-block p { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .license-line { text-align: center; font-size: 9px; color: #888; margin-top: 6px; }
+    .terms-text { font-size: 8.5px; color: #888; line-height: 1.3; }
+
+    /* ===== Print ===== */
+    @media print {
+      body { background: #fff; margin: 0; padding: 0; }
+      .page { margin: 0; padding: 0.25in 0.4in; width: 100%; min-height: auto; box-shadow: none; }
+      .no-print { display: none !important; }
+    }
+
+    .no-print {
+      text-align: center;
+      margin: 16px auto;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .no-print button {
+      background: #040A24;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    .no-print button:hover { background: #0d1735; }
+
+    .no-print .btn-back {
+      background: transparent;
+      border: 2px solid #040A24;
+      color: #040A24;
+    }
+
+    .no-print .btn-back:hover { background: #f0f0f0; }
+
+    /* Loading */
+    .loading-center {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button class="btn-back" onclick="history.back()">&#8592; Back</button>
+    <button onclick="window.print()">Print Invoice / Save as PDF</button>
+  </div>
+
+  <div class="page" id="invoicePage" style="display: none;">
+
+    <!-- ===== Header ===== -->
+    <div class="invoice-header">
+      <div class="brand">
+        <img src="../images/logo-bg.png" alt="Duct Cleaning Nassau County Logo">
+        <div class="brand-info">
+          <h2>Duct Cleaning Nassau County</h2>
+          <p>
+            Nassau County, NY<br>
+            Email: info@dcncny.com<br>
+            Phone: (516) 324-8078<br>
+            www.dcncny.com
+          </p>
+        </div>
+      </div>
+      <div class="invoice-title">
+        <h1>Invoice</h1>
+        <p class="inv-number" id="pInvNumber"># INV-0001</p>
+      </div>
+    </div>
+
+    <!-- ===== Meta Row ===== -->
+    <div class="meta-row">
+      <div class="meta-item">
+        <span class="meta-label">Date Issued</span>
+        <span class="meta-value" id="pDateIssued"></span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Date Due</span>
+        <span class="meta-value">Due on Receipt</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Type</span>
+        <span class="meta-value" id="pType">Invoice</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Check Payable To</span>
+        <span class="meta-value">Duct Cleaning Nassau County</span>
+      </div>
+      <div class="meta-item balance-due">
+        <span class="meta-label">Balance Due</span>
+        <span class="meta-value" id="pBalanceDue">$0.00</span>
+      </div>
+    </div>
+
+    <!-- ===== FROM / TO / JOB ===== -->
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>From</h3>
+        <p>
+          <span class="name">Duct Cleaning Nassau County</span><br>
+          Nassau County, NY<br>
+          info@dcncny.com<br>
+          (516) 324-8078
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>To</h3>
+        <p id="pCustomerInfo"></p>
+      </div>
+      <div class="info-block">
+        <h3>Job Location</h3>
+        <p id="pJobLocation"></p>
+      </div>
+    </div>
+
+    <!-- ===== Services Table ===== -->
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th style="width:5%">#</th>
+          <th style="width:35%">Services</th>
+          <th class="c" style="width:8%">Qty</th>
+          <th class="r" style="width:13%">Price</th>
+          <th class="r" style="width:13%">Discount</th>
+          <th class="c" style="width:12%">Tax</th>
+          <th class="r" style="width:14%">Total</th>
+        </tr>
+      </thead>
+      <tbody id="pServicesBody"></tbody>
+    </table>
+
+    <!-- ===== Totals ===== -->
+    <div class="totals-section">
+      <table class="totals-table">
+        <tr class="subtotal-row"><td>Subtotal</td><td id="pSubtotal">$0.00</td></tr>
+        <tr><td id="pTaxLabel">Tax (8.875%)</td><td id="pTaxAmount">$0.00</td></tr>
+        <tr class="grand-total"><td>Grand Total ($)</td><td id="pGrandTotal">$0.00</td></tr>
+        <tr class="payment-row"><td id="pPaymentLabel">Payment</td><td id="pPaymentAmount">$0.00</td></tr>
+        <tr class="balance-row"><td>Balance Due</td><td id="pBalanceDue2">$0.00</td></tr>
+      </table>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <div class="footer-sections">
+      <div class="footer-block">
+        <h3>Accepted Payment Methods</h3>
+        <div class="payment-badges">
+          <span class="payment-badge">Cash</span>
+          <span class="payment-badge">Check</span>
+          <span class="payment-badge">Credit Card</span>
+          <span class="payment-badge">Zelle</span>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3>Message</h3>
+        <p id="pMessage">Thank you for your business.</p>
+      </div>
+
+      <div class="signature-row">
+        <div class="sig-block">
+          <div class="sig-line"></div>
+          <p>Customer Signature</p>
+        </div>
+        <div class="sig-block">
+          <div class="sig-line"></div>
+          <p>Technician Signature</p>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3>Terms</h3>
+        <p class="terms-text">Payment Terms: All invoices for services covered by the estimate are payable upon completion of work or date stated on the invoice. We accept all major credit cards. Late Charges: Any invoices not paid by you on the date of completion may bear interest after the due date until the invoice is paid. There will be a $25 return check fee.</p>
+      </div>
+    </div>
+
+    <p class="license-line">Licensed &amp; Insured - HIC #0660487 - Duct Cleaning Nassau County</p>
+
+  </div>
+
+  <div class="loading-center" id="loadingMsg">Loading invoice...</div>
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js?v=3"></script>
+  <script src="js/auth.js?v=3"></script>
+  <script src="js/invoice.js?v=3"></script>
+  <script>
+    (async function init() {
+      const user = await AUTH.requireAuth();
+      if (!user) return;
+
+      const params = new URLSearchParams(window.location.search);
+      const isPreview = params.get('preview') === 'true';
+      const invoiceId = params.get('id');
+
+      let data;
+
+      if (isPreview) {
+        // Load from sessionStorage (preview from create form)
+        const raw = sessionStorage.getItem('invoicePreview');
+        if (!raw) {
+          document.getElementById('loadingMsg').textContent = 'No preview data found. Go back and try again.';
+          return;
+        }
+        const preview = JSON.parse(raw);
+        data = {
+          invoice_number: preview.formData.invoiceNumber,
+          date_issued: preview.formData.dateIssued,
+          type: preview.formData.type,
+          subtotal: preview.totals.subtotal,
+          tax_rate: preview.taxRate,
+          tax_amount: preview.totals.totalTax,
+          discount: InvoiceManager.discount,
+          total: preview.totals.grandTotal,
+          payment_method: preview.formData.paymentMethod,
+          status: preview.formData.status,
+          notes: preview.formData.notes,
+          customers: {
+            name: preview.formData.customerName,
+            phone: preview.formData.customerPhone,
+            email: preview.formData.customerEmail,
+            address: preview.formData.jobAddress,
+            city: preview.formData.jobCity,
+            state: preview.formData.jobState,
+            zip: preview.formData.jobZip
+          },
+          invoice_items: preview.lineItems
+            .filter(i => i.description.trim())
+            .map(i => ({
+              description: i.description,
+              qty: i.qty,
+              unit_price: i.unitPrice,
+              discount: i.discount,
+              taxable: i.taxable,
+              line_total: (i.qty * i.unitPrice - i.discount) + (i.taxable ? (i.qty * i.unitPrice - i.discount) * preview.taxRate / 100 : 0)
+            }))
+        };
+      } else if (invoiceId) {
+        // Load from Supabase
+        try {
+          data = await InvoiceManager.loadInvoice(invoiceId);
+        } catch (e) {
+          document.getElementById('loadingMsg').textContent = 'Error loading invoice: ' + e.message;
+          return;
+        }
+      } else {
+        document.getElementById('loadingMsg').textContent = 'No invoice specified.';
+        return;
+      }
+
+      renderInvoice(data);
+    })();
+
+    function esc(text) {
+      const d = document.createElement('div');
+      d.textContent = text || '';
+      return d.innerHTML;
+    }
+
+    function renderInvoice(inv) {
+      const cust = inv.customers || {};
+      const items = inv.invoice_items || [];
+
+      // Header
+      document.getElementById('pInvNumber').textContent = '# INV-' + esc(inv.invoice_number);
+      document.getElementById('pDateIssued').textContent = inv.date_issued
+        ? new Date(inv.date_issued + 'T00:00:00').toLocaleDateString('en-US')
+        : '';
+      document.getElementById('pType').textContent = (inv.type || 'Invoice').charAt(0).toUpperCase() + (inv.type || 'invoice').slice(1);
+
+      // Balance due
+      const total = Number(inv.total) || 0;
+      document.getElementById('pBalanceDue').textContent = '$' + total.toFixed(2);
+      document.getElementById('pBalanceDue2').textContent = '$' + total.toFixed(2);
+
+      // Customer info
+      document.getElementById('pCustomerInfo').innerHTML =
+        `<span class="name">Name: ${esc(cust.name)}</span><br>` +
+        `Phone: ${esc(cust.phone)}<br>` +
+        `Email: ${esc(cust.email)}`;
+
+      // Job location
+      document.getElementById('pJobLocation').innerHTML =
+        `Address: ${esc(cust.address)}<br>` +
+        `City: ${esc(cust.city)} State: ${esc(cust.state)}<br>` +
+        `Zip: ${esc(cust.zip)}`;
+
+      // Services table
+      const tbody = document.getElementById('pServicesBody');
+      tbody.innerHTML = '';
+
+      items.forEach((item, i) => {
+        const qty = Number(item.qty) || 0;
+        const price = Number(item.unit_price || item.unitPrice) || 0;
+        const disc = Number(item.discount) || 0;
+        const lineBase = qty * price - disc;
+        const taxRate = Number(inv.tax_rate) || 0;
+        const lineTax = item.taxable !== false ? lineBase * taxRate / 100 : 0;
+        const lineTotal = lineBase + lineTax;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${i + 1}</td>
+          <td><span class="service-name">${esc(item.description)}</span></td>
+          <td class="c">${qty}</td>
+          <td class="r">$${price.toFixed(2)}</td>
+          <td class="r">${disc > 0 ? '$' + disc.toFixed(2) : ''}</td>
+          <td class="c">${item.taxable !== false ? '&#10003;' : ''}</td>
+          <td class="r">$${lineTotal.toFixed(2)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Fill empty rows to match template (up to 8)
+      for (let i = items.length; i < 8; i++) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + (i + 1) + '</td><td>&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td><td class="r">&nbsp;</td><td class="c">&nbsp;</td><td class="r">&nbsp;</td>';
+        tbody.appendChild(tr);
+      }
+
+      // Totals
+      const subtotal = Number(inv.subtotal) || 0;
+      const taxRate = Number(inv.tax_rate) || 0;
+      const taxAmount = Number(inv.tax_amount) || 0;
+      const discount = Number(inv.discount) || 0;
+
+      document.getElementById('pSubtotal').textContent = '$' + subtotal.toFixed(2);
+      document.getElementById('pTaxLabel').textContent = 'Tax (' + taxRate.toFixed(3) + '%)';
+      document.getElementById('pTaxAmount').textContent = '$' + taxAmount.toFixed(2);
+      document.getElementById('pGrandTotal').textContent = '$' + total.toFixed(2);
+
+      // Payment
+      const method = inv.payment_method || '';
+      if (inv.status === 'paid' && method) {
+        document.getElementById('pPaymentLabel').textContent = 'Payment via ' + method.replace('_', ' ');
+        document.getElementById('pPaymentAmount').textContent = '(-) $' + total.toFixed(2);
+        document.getElementById('pBalanceDue2').textContent = '$0.00';
+      } else {
+        document.getElementById('pPaymentLabel').textContent = 'Payment via _______________';
+        document.getElementById('pPaymentAmount').textContent = '(-) $0.00';
+      }
+
+      // Notes
+      if (inv.notes) {
+        document.getElementById('pMessage').textContent = inv.notes;
+      }
+
+      // Show
+      document.getElementById('loadingMsg').style.display = 'none';
+      document.getElementById('invoicePage').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
