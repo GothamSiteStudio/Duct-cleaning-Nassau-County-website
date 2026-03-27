@@ -58,28 +58,28 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 
 ### Website Build (Static HTML/CSS, SEO-first)
 - [x] Set up project structure (HTML, CSS, JS, images)
-- [ ] Build homepage targeting "duct cleaning Nassau County"
-- [ ] Implement mobile-first responsive design
-- [ ] Add hero section with strong CTA (call now / free estimate)
-- [ ] Add services overview section (5 services from Y&M brand)
-- [ ] Add trust signals (licensed HIC #0660487, insured, family-owned)
-- [ ] Add health benefits section (why clean your ducts)
-- [ ] Add service area section with ALL Nassau County towns
-- [ ] Create "About" section for Y&M / Mati's story
-- [ ] Add FAQ section (seed 5+ common questions)
-- [ ] Add testimonials/reviews placeholder section
+- [x] Build homepage targeting "duct cleaning Nassau County"
+- [x] Implement mobile-first responsive design
+- [x] Add hero section with strong CTA (call now / free estimate)
+- [x] Add services overview section (5 services from Y&M brand)
+- [x] Add trust signals (licensed HIC #0660487, insured, family-owned)
+- [x] Add health benefits section (why clean your ducts)
+- [x] Add service area section with ALL Nassau County towns
+- [x] Create "About" section for Y&M / Mati's story
+- [x] Add FAQ section (seed 5+ common questions)
+- [x] Add testimonials/reviews placeholder section
 - [ ] Add contact section with phone, email, form
-- [ ] Implement click-to-call on mobile (sticky bottom bar)
-- [ ] Build proper HTML semantic structure (h1, h2, nav, main, footer)
-- [ ] Add favicon and Open Graph meta tags
-- [ ] Add JSON-LD structured data: LocalBusiness schema
-- [ ] Add JSON-LD structured data: Service schema
-- [ ] Add JSON-LD structured data: FAQ schema
-- [ ] Set up sitemap.xml
-- [ ] Set up robots.txt
-- [ ] Create About page
-- [ ] Create Contact page
-- [ ] Image placeholders for original photos (to be taken later)
+- [x] Implement click-to-call on mobile (sticky bottom bar)
+- [x] Build proper HTML semantic structure (h1, h2, nav, main, footer)
+- [x] Add favicon and Open Graph meta tags
+- [x] Add JSON-LD structured data: LocalBusiness schema
+- [x] Add JSON-LD structured data: Service schema
+- [x] Add JSON-LD structured data: FAQ schema
+- [x] Set up sitemap.xml
+- [x] Set up robots.txt
+- [x] Create About page
+- [x] Create Contact page
+- [x] Image placeholders for original photos (to be taken later)
 
 ### Design Assets
 - [ ] Design business card layout
