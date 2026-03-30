@@ -68,7 +68,7 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [x] Create "About" section for Y&M / Mati's story
 - [x] Add FAQ section (seed 5+ common questions)
 - [x] Add testimonials/reviews placeholder section
-- [ ] Add contact section with phone, email, form
+- [x] Add contact section with phone, email, form
 - [x] Implement click-to-call on mobile (sticky bottom bar)
 - [x] Build proper HTML semantic structure (h1, h2, nav, main, footer)
 - [x] Add favicon and Open Graph meta tags
@@ -82,52 +82,52 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [x] Image placeholders for original photos (to be taken later)
 
 ### Design Assets
-- [ ] Design business card layout
-- [ ] Design receipt/invoice template
-- [ ] Design car magnet layout
+- [x] Design business card layout
+- [x] Design receipt/invoice template
+- [x] Design car magnet layout
 
 ### Google Business Profile Prep
-- [ ] Prepare GBP listing content (description, categories, attributes)
-- [ ] Write GBP business description (750 chars, keyword-rich)
-- [ ] Primary category: Air Duct Cleaning Service
-- [ ] Secondary: HVAC Contractor, Dryer Vent Cleaning
-- [ ] Collect minimum 10 photos for GBP
+- [x] Prepare GBP listing content (description, categories, attributes)
+- [x] Write GBP business description (750 chars, keyword-rich)
+- [x] Primary category: Air Duct Cleaning Service
+- [x] Secondary: HVAC Contractor, Dryer Vent Cleaning
+- [x] Collect minimum 10 photos for GBP
 
 ---
 
 ## WEEK 2 - Content & Service Pages
 
 ### Service Pages (one page per high-value keyword cluster)
-- [ ] `/services/air-duct-cleaning.html` - Air duct cleaning (primary)
-- [ ] `/services/dryer-vent-cleaning.html` - Dryer vent cleaning
-- [ ] `/services/uv-light-installation.html` - UV light installation
-- [ ] `/services/sanitization-disinfection.html` - Sanitization & disinfection
-- [ ] `/services/hvac-cleaning.html` - HVAC system cleaning
-- [ ] `/services/commercial-duct-cleaning.html` - Commercial services
+- [x] `/services/air-duct-cleaning.html` - Air duct cleaning (primary)
+- [x] `/services/dryer-vent-cleaning.html` - Dryer vent cleaning
+- [x] `/services/uv-light-installation.html` - UV light installation
+- [x] `/services/sanitization-disinfection.html` - Sanitization & disinfection
+- [x] `/services/hvac-cleaning.html` - HVAC system cleaning
+- [x] `/services/commercial-duct-cleaning.html` - Commercial services
 
 ### Location Pages - Tier 1 (10 pages)
-- [ ] `/locations/duct-cleaning-hempstead-ny.html`
-- [ ] `/locations/duct-cleaning-freeport-ny.html`
-- [ ] `/locations/duct-cleaning-levittown-ny.html`
-- [ ] `/locations/duct-cleaning-east-meadow-ny.html`
-- [ ] `/locations/duct-cleaning-valley-stream-ny.html`
-- [ ] `/locations/duct-cleaning-elmont-ny.html`
-- [ ] `/locations/duct-cleaning-long-beach-ny.html`
-- [ ] `/locations/duct-cleaning-oceanside-ny.html`
-- [ ] `/locations/duct-cleaning-franklin-square-ny.html`
-- [ ] `/locations/duct-cleaning-uniondale-ny.html`
+- [x] `/locations/duct-cleaning-hempstead-ny.html`
+- [x] `/locations/duct-cleaning-freeport-ny.html`
+- [x] `/locations/duct-cleaning-levittown-ny.html`
+- [x] `/locations/duct-cleaning-east-meadow-ny.html`
+- [x] `/locations/duct-cleaning-valley-stream-ny.html`
+- [x] `/locations/duct-cleaning-elmont-ny.html`
+- [x] `/locations/duct-cleaning-long-beach-ny.html`
+- [x] `/locations/duct-cleaning-oceanside-ny.html`
+- [x] `/locations/duct-cleaning-franklin-square-ny.html`
+- [x] `/locations/duct-cleaning-uniondale-ny.html`
 
 ### Location Pages - Tier 2 (10 pages)
-- [ ] `/locations/duct-cleaning-garden-city-ny.html`
-- [ ] `/locations/duct-cleaning-great-neck-ny.html`
-- [ ] `/locations/duct-cleaning-manhasset-ny.html`
-- [ ] `/locations/duct-cleaning-rockville-centre-ny.html`
-- [ ] `/locations/duct-cleaning-mineola-ny.html`
-- [ ] `/locations/duct-cleaning-port-washington-ny.html`
-- [ ] `/locations/duct-cleaning-syosset-ny.html`
-- [ ] `/locations/duct-cleaning-jericho-ny.html`
-- [ ] `/locations/duct-cleaning-roslyn-ny.html`
-- [ ] `/locations/duct-cleaning-glen-cove-ny.html`
+- [x] `/locations/duct-cleaning-garden-city-ny.html`
+- [x] `/locations/duct-cleaning-great-neck-ny.html`
+- [x] `/locations/duct-cleaning-manhasset-ny.html`
+- [x] `/locations/duct-cleaning-rockville-centre-ny.html`
+- [x] `/locations/duct-cleaning-mineola-ny.html`
+- [x] `/locations/duct-cleaning-port-washington-ny.html`
+- [x] `/locations/duct-cleaning-syosset-ny.html`
+- [x] `/locations/duct-cleaning-jericho-ny.html`
+- [x] `/locations/duct-cleaning-roslyn-ny.html`
+- [x] `/locations/duct-cleaning-glen-cove-ny.html`
 
 ### On-Page SEO for All Pages
 - [ ] Unique title tags (60 chars) with primary keyword + location
