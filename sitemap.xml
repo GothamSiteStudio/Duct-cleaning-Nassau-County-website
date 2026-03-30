@@ -49,106 +49,113 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Location Pages - Tier 1 -->
+  <!-- Service Areas Hub -->
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-hempstead-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Area Pages - Tier 1 -->
+  <url>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-hempstead-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-freeport-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-freeport-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-levittown-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-levittown-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-east-meadow-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-east-meadow-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-valley-stream-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-valley-stream-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-elmont-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-elmont-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-long-beach-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-long-beach-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-oceanside-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-oceanside-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-franklin-square-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-franklin-square-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-uniondale-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-uniondale-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Location Pages - Tier 2 -->
+  <!-- Service Area Pages - Tier 2 -->
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-garden-city-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-garden-city-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-great-neck-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-great-neck-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-manhasset-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-manhasset-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-rockville-centre-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-rockville-centre-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-mineola-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-mineola-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-port-washington-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-port-washington-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-syosset-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-syosset-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-jericho-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-jericho-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-roslyn-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-roslyn-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dcncny.com/locations/duct-cleaning-glen-cove-ny.html</loc>
+    <loc>https://www.dcncny.com/service-areas/duct-cleaning-glen-cove-ny.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
