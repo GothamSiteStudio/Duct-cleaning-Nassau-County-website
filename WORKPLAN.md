@@ -130,11 +130,11 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [x] `/locations/duct-cleaning-glen-cove-ny.html`
 
 ### On-Page SEO for All Pages
-- [ ] Unique title tags (60 chars) with primary keyword + location
-- [ ] Meta descriptions (155 chars) with CTA
-- [ ] H1 with primary keyword, H2s with secondary keywords
-- [ ] Internal linking between all pages
-- [ ] Image alt tags with descriptive, keyword-relevant text
+- [x] Unique title tags (60 chars) with primary keyword + location
+- [x] Meta descriptions (155 chars) with CTA
+- [x] H1 with primary keyword, H2s with secondary keywords
+- [x] Internal linking between all pages
+- [x] Image alt tags with descriptive, keyword-relevant text
 - [ ] Page speed optimization (compressed images, minimal CSS/JS)
 
 ### Google Business Profile Launch
