@@ -15,7 +15,7 @@
 | **Hosting** | GitHub Pages |
 | **Repo** | github.com/GothamSiteStudio/Duct-cleaning-Nassau-County-website |
 | **Parent Brand** | Y&M Service (CT + NY) |
-| **License** | HIC #0660487 |
+| **License** | HIC #204613 |
 
 ---
 
@@ -62,7 +62,7 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [x] Implement mobile-first responsive design
 - [x] Add hero section with strong CTA (call now / free estimate)
 - [x] Add services overview section (5 services from Y&M brand)
-- [x] Add trust signals (licensed HIC #0660487, insured, family-owned)
+- [x] Add trust signals (licensed HIC #204613, insured, family-owned)
 - [x] Add health benefits section (why clean your ducts)
 - [x] Add service area section with ALL Nassau County towns
 - [x] Create "About" section for Y&M / Mati's story
@@ -287,7 +287,7 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [ ] RamAir system = most advanced equipment
 - [ ] Organic/botanical sanitization (Benefect)
 - [ ] UV light installation as unique add-on
-- [ ] Licensed & insured (HIC #0660487)
+- [ ] Licensed & insured (HIC #204613)
 - [ ] Free in-home inspection and estimate
 - [ ] Bilingual service capability
 
