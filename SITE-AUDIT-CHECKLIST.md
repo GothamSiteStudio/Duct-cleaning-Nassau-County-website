@@ -53,8 +53,8 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Standardize CTA wording across hero, footer, and form sections.
 - [x] Add a map or coverage visual to the contact experience.
 - [x] Add visible success or failure messaging after form submission.
-- [ ] Add dismiss behavior for the sticky mobile phone CTA if it blocks content.
-- [ ] Add pricing guidance or at least starting-price ranges on service pages.
+- [x] Add dismiss behavior for the sticky mobile phone CTA if it blocks content.
+- [x] Add pricing guidance or at least starting-price ranges on service pages.
 - [ ] Make breadcrumbs more visibly useful where schema already exists.
 - [ ] Improve scroll performance in `js/main.js` if the page grows heavier.
 

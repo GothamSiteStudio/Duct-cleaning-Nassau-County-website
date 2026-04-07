@@ -919,6 +919,11 @@ details[open] .faq-question::after {
   display: none;
 }
 
+.phone-cta-shell,
+.phone-cta-dismiss {
+  display: none;
+}
+
 .mobile-menu-cta {
   display: none;
 }
@@ -996,6 +1001,79 @@ details[open] .faq-question::after {
   grid-template-columns: 1.2fr 1fr;
   gap: 48px;
   align-items: start;
+}
+
+.pricing-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-card h3 {
+  margin-bottom: 12px;
+}
+
+.pricing-card p {
+  color: var(--text-light);
+  margin-bottom: 14px;
+}
+
+.pricing-card-emphasis {
+  background: linear-gradient(180deg, rgba(13, 23, 53, 0.96), rgba(8, 16, 40, 0.96));
+  border-color: rgba(56, 189, 248, 0.24);
+  box-shadow: var(--shadow-glow);
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.pricing-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+.pricing-note {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  border-radius: var(--radius);
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--text-light);
+}
+
+.pricing-note a {
+  font-weight: 700;
 }
 
 /* Contact Form */
@@ -1325,6 +1403,7 @@ details[open] .faq-question::after {
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .two-col { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
 
   .hero h1 { font-size: 2.2rem; }
   .section-header h2 { font-size: 1.75rem; }
@@ -1496,6 +1575,7 @@ details[open] .faq-question::after {
   .reviews-grid { grid-template-columns: 1fr; }
   .areas-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
 
   .section { padding: 48px 0; }
   .section-header h2 { font-size: 1.5rem; }
@@ -1503,7 +1583,35 @@ details[open] .faq-question::after {
   .page-hero { padding: 80px 0 40px; }
   .page-hero h1 { font-size: 1.75rem; }
 
+  .pricing-card {
+    padding: 24px 20px;
+  }
+
   body { padding-bottom: 56px; }
+
+  body.phone-cta-dismissed {
+    padding-bottom: 0;
+  }
+
+  .phone-cta-shell {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    gap: 8px;
+    align-items: stretch;
+    padding: 8px;
+    background: rgba(2, 7, 20, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 -2px 20px rgba(0,0,0,0.4);
+  }
+
+  .phone-cta-shell.is-dismissed {
+    display: none;
+  }
 
   .phone-cta {
     display: flex;
@@ -1526,9 +1634,43 @@ details[open] .faq-question::after {
     min-height: 56px;
   }
 
-  .phone-cta:focus-visible {
+  .phone-cta-shell .phone-cta {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex: 1 1 auto;
+    min-height: 56px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .phone-cta-dismiss {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 76px;
+    padding: 0 14px;
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .phone-cta-dismiss:hover {
+    background: var(--bg-surface-hover);
+    color: var(--white);
+  }
+
+  .phone-cta:focus-visible,
+  .phone-cta-dismiss:focus-visible {
     outline: 3px solid var(--white);
-    outline-offset: -3px;
+    outline-offset: 2px;
   }
 }
 

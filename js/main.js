@@ -122,4 +122,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
     revealElements.forEach(function (el) { observer.observe(el); });
   }
+
+  /* ===== Sticky Mobile Call CTA Dismiss ===== */
+  var phoneCta = document.querySelector('.phone-cta');
+  if (phoneCta && phoneCta.parentNode) {
+    var phoneCtaDismissKey = 'phoneCtaDismissed';
+    var phoneCtaDismissed = false;
+
+    try {
+      phoneCtaDismissed = window.sessionStorage.getItem(phoneCtaDismissKey) === 'true';
+    } catch (error) {
+      phoneCtaDismissed = false;
+    }
+
+    var phoneCtaShell = document.createElement('div');
+    phoneCtaShell.className = 'phone-cta-shell';
+    phoneCtaShell.setAttribute('role', 'region');
+    phoneCtaShell.setAttribute('aria-label', 'Quick call bar');
+    phoneCta.parentNode.insertBefore(phoneCtaShell, phoneCta);
+    phoneCtaShell.appendChild(phoneCta);
+
+    var dismissButton = document.createElement('button');
+    dismissButton.type = 'button';
+    dismissButton.className = 'phone-cta-dismiss';
+    dismissButton.setAttribute('aria-label', 'Dismiss sticky call button');
+    dismissButton.textContent = 'Close';
+    phoneCtaShell.appendChild(dismissButton);
+
+    function dismissPhoneCta() {
+      phoneCtaShell.classList.add('is-dismissed');
+      document.body.classList.add('phone-cta-dismissed');
+
+      try {
+        window.sessionStorage.setItem(phoneCtaDismissKey, 'true');
+      } catch (error) {
+        // Ignore storage failures and keep the button dismissible for the current view.
+      }
+    }
+
+    if (phoneCtaDismissed) {
+      dismissPhoneCta();
+    }
+
+    dismissButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      dismissPhoneCta();
+    });
+  }
 });
