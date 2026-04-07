@@ -8,7 +8,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Expand Open Graph and Twitter card metadata across primary pages.
 - [ ] Replace remaining HTML redirect pages in `locations/` with proper server-level redirects where possible.
 - [x] Complete the homepage FAQ schema so every visible FAQ item is reflected in JSON-LD.
-- [ ] Add stronger internal links between service pages.
+- [x] Add stronger internal links between service pages.
 - [ ] Add stronger internal links between service-area pages and nearby towns.
 - [ ] Add ZIP codes where relevant on local landing pages.
 - [ ] Block sensitive files in `robots.txt`, including `receipt.html` and `invoice-blank.pdf`.
