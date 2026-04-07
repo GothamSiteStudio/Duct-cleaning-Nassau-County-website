@@ -51,7 +51,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Add client-side validation and visible form feedback.
 - [x] Add basic spam protection with a honeypot field.
 - [x] Standardize CTA wording across hero, footer, and form sections.
-- [ ] Add a map or coverage visual to the contact experience.
+- [x] Add a map or coverage visual to the contact experience.
 - [x] Add visible success or failure messaging after form submission.
 - [ ] Add dismiss behavior for the sticky mobile phone CTA if it blocks content.
 - [ ] Add pricing guidance or at least starting-price ranges on service pages.
