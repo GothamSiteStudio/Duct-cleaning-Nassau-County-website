@@ -13,7 +13,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Add ZIP codes where relevant on local landing pages.
 - [x] Block sensitive files in `robots.txt`, including `receipt.html` and `invoice-blank.pdf`.
 - [x] Convert large images to lighter formats where it improves load time.
-- [ ] Minify CSS and JavaScript for production deployment.
+- [x] Minify CSS and JavaScript for production deployment.
 - [x] Add page-specific FAQ schema to service pages.
 - [x] Add page-specific FAQ schema to service-area pages.
 
