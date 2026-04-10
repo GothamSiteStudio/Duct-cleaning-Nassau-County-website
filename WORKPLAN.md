@@ -105,29 +105,29 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [x] `/services/hvac-cleaning.html` - HVAC system cleaning
 - [x] `/services/commercial-duct-cleaning.html` - Commercial services
 
-### Location Pages - Tier 1 (10 pages)
-- [x] `/locations/duct-cleaning-hempstead-ny.html`
-- [x] `/locations/duct-cleaning-freeport-ny.html`
-- [x] `/locations/duct-cleaning-levittown-ny.html`
-- [x] `/locations/duct-cleaning-east-meadow-ny.html`
-- [x] `/locations/duct-cleaning-valley-stream-ny.html`
-- [x] `/locations/duct-cleaning-elmont-ny.html`
-- [x] `/locations/duct-cleaning-long-beach-ny.html`
-- [x] `/locations/duct-cleaning-oceanside-ny.html`
-- [x] `/locations/duct-cleaning-franklin-square-ny.html`
-- [x] `/locations/duct-cleaning-uniondale-ny.html`
+### Service Area Pages - Tier 1 (10 pages)
+- [x] `/service-areas/duct-cleaning-hempstead-ny.html`
+- [x] `/service-areas/duct-cleaning-freeport-ny.html`
+- [x] `/service-areas/duct-cleaning-levittown-ny.html`
+- [x] `/service-areas/duct-cleaning-east-meadow-ny.html`
+- [x] `/service-areas/duct-cleaning-valley-stream-ny.html`
+- [x] `/service-areas/duct-cleaning-elmont-ny.html`
+- [x] `/service-areas/duct-cleaning-long-beach-ny.html`
+- [x] `/service-areas/duct-cleaning-oceanside-ny.html`
+- [x] `/service-areas/duct-cleaning-franklin-square-ny.html`
+- [x] `/service-areas/duct-cleaning-uniondale-ny.html`
 
-### Location Pages - Tier 2 (10 pages)
-- [x] `/locations/duct-cleaning-garden-city-ny.html`
-- [x] `/locations/duct-cleaning-great-neck-ny.html`
-- [x] `/locations/duct-cleaning-manhasset-ny.html`
-- [x] `/locations/duct-cleaning-rockville-centre-ny.html`
-- [x] `/locations/duct-cleaning-mineola-ny.html`
-- [x] `/locations/duct-cleaning-port-washington-ny.html`
-- [x] `/locations/duct-cleaning-syosset-ny.html`
-- [x] `/locations/duct-cleaning-jericho-ny.html`
-- [x] `/locations/duct-cleaning-roslyn-ny.html`
-- [x] `/locations/duct-cleaning-glen-cove-ny.html`
+### Service Area Pages - Tier 2 (10 pages)
+- [x] `/service-areas/duct-cleaning-garden-city-ny.html`
+- [x] `/service-areas/duct-cleaning-great-neck-ny.html`
+- [x] `/service-areas/duct-cleaning-manhasset-ny.html`
+- [x] `/service-areas/duct-cleaning-rockville-centre-ny.html`
+- [x] `/service-areas/duct-cleaning-mineola-ny.html`
+- [x] `/service-areas/duct-cleaning-port-washington-ny.html`
+- [x] `/service-areas/duct-cleaning-syosset-ny.html`
+- [x] `/service-areas/duct-cleaning-jericho-ny.html`
+- [x] `/service-areas/duct-cleaning-roslyn-ny.html`
+- [x] `/service-areas/duct-cleaning-glen-cove-ny.html`
 
 ### On-Page SEO for All Pages
 - [x] Unique title tags (60 chars) with primary keyword + location
@@ -148,7 +148,7 @@ Hicksville, Massapequa, Plainview, Bethpage, Merrick, Bellmore, Wantagh, Seaford
 - [ ] Add website URL
 - [ ] Request verification (postcard to 3320 Park Ave, Oceanside)
 
-### Location Pages - Tier 3 (Week 3)
+### Service Area Pages - Tier 3 (Week 3)
 - [ ] Hicksville, Massapequa, Plainview, Bethpage
 - [ ] Merrick, Bellmore, Wantagh, Seaford
 - [ ] Baldwin, Lynbrook, New Hyde Park, Westbury

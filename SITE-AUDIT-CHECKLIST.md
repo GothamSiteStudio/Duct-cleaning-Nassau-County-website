@@ -6,7 +6,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 
 - [x] Create a real og-image for all key share surfaces and keep the dimensions consistent.
 - [x] Expand Open Graph and Twitter card metadata across primary pages.
-- [ ] Replace remaining HTML redirect pages in `locations/` with proper server-level redirects where possible.
+- [x] Replace remaining HTML redirect pages in `locations/` with a single canonical `service-areas/` structure (GitHub Pages setup, no server redirect layer).
 - [x] Complete the homepage FAQ schema so every visible FAQ item is reflected in JSON-LD.
 - [x] Add stronger internal links between service pages.
 - [ ] Add stronger internal links between service-area pages and nearby towns.
