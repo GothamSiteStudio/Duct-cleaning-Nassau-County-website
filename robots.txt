@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /receipt.html
+Disallow: /invoice-blank.pdf
 
 Sitemap: https://www.dcncny.com/sitemap.xml
