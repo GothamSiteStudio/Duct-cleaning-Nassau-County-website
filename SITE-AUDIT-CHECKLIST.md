@@ -10,7 +10,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Complete the homepage FAQ schema so every visible FAQ item is reflected in JSON-LD.
 - [x] Add stronger internal links between service pages.
 - [x] Add stronger internal links between service-area pages and nearby towns.
-- [ ] Add ZIP codes where relevant on local landing pages.
+- [x] Add ZIP codes where relevant on local landing pages.
 - [ ] Block sensitive files in `robots.txt`, including `receipt.html` and `invoice-blank.pdf`.
 - [ ] Convert large images to lighter formats where it improves load time.
 - [ ] Minify CSS and JavaScript for production deployment.
