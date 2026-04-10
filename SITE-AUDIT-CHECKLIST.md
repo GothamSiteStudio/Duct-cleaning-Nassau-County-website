@@ -15,7 +15,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Convert large images to lighter formats where it improves load time.
 - [ ] Minify CSS and JavaScript for production deployment.
 - [x] Add page-specific FAQ schema to service pages.
-- [ ] Add page-specific FAQ schema to service-area pages.
+- [x] Add page-specific FAQ schema to service-area pages.
 
 ## 2. E-E-A-T
 
