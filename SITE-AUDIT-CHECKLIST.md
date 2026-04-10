@@ -4,7 +4,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 
 ## 1. Technical SEO
 
-- [ ] Create a real og-image for all key share surfaces and keep the dimensions consistent.
+- [x] Create a real og-image for all key share surfaces and keep the dimensions consistent.
 - [x] Expand Open Graph and Twitter card metadata across primary pages.
 - [ ] Replace remaining HTML redirect pages in `locations/` with proper server-level redirects where possible.
 - [x] Complete the homepage FAQ schema so every visible FAQ item is reflected in JSON-LD.
