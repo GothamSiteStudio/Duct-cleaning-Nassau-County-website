@@ -29,7 +29,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [ ] Publish case studies with before/after context and measurable outcomes.
 - [ ] Add trust metrics such as homes served, years in business, and review counts.
 - [ ] Add before/after image galleries for major services.
-- [ ] Add organization or local business schema to the About page.
+- [x] Add organization or local business schema to the About page.
 - [ ] Clarify the physical business location policy and what address should be public.
 - [ ] Expand the "licensed and insured" claim with specific details that can be safely disclosed.
 
