@@ -74,15 +74,19 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ===== Header Scroll Shadow ===== */
   const header = document.getElementById('header');
   if (header) {
-    var lastScroll = 0;
+    var scrollTicking = false;
     window.addEventListener('scroll', function () {
-      var scrollY = window.scrollY;
-      if (scrollY > 60) {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
-      } else {
-        header.style.boxShadow = 'none';
+      if (!scrollTicking) {
+        requestAnimationFrame(function () {
+          if (window.scrollY > 60) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
       }
-      lastScroll = scrollY;
     }, { passive: true });
   }
 
