@@ -732,6 +732,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 32px;
 }
 
+.area-group h2,
 .area-group h3 {
   font-size: 1rem;
   color: var(--accent);
@@ -868,7 +869,7 @@ details[open] .faq-question::after {
   margin-bottom: 8px;
 }
 
-.footer-col h4 {
+.footer-col h3 {
   color: var(--white);
   font-size: 1rem;
   margin-bottom: 16px;
