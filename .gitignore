@@ -16,3 +16,8 @@ node_modules/
 
 # Claude local workspace
 .claude/
+
+# Video script generator
+generate-script-doc.py
+*.docx
+.venv/

@@ -55,7 +55,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 - [x] Add visible success or failure messaging after form submission.
 - [x] Add dismiss behavior for the sticky mobile phone CTA if it blocks content.
 - [x] Add pricing guidance or at least starting-price ranges on service pages.
-- [ ] Make breadcrumbs more visibly useful where schema already exists.
+- [x] Make breadcrumbs more visibly useful where schema already exists.
 - [ ] Improve scroll performance in `js/main.js` if the page grows heavier.
 
 ## 5. Authoritative Presence
