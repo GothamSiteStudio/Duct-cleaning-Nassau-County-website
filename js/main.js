@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { passive: true });
   }
 
+  /* ===== Reduced-motion preference ===== */
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ===== Smooth Scroll for Anchor Links ===== */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -100,14 +103,14 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         var headerHeight = header ? header.offsetHeight : 0;
         var targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        window.scrollTo({ top: targetPos, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
 
   /* ===== Scroll Reveal Animation ===== */
   var revealElements = document.querySelectorAll('.service-card, .health-card, .review-card, .area-group, .faq-item');
-  if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+  if (revealElements.length > 0 && 'IntersectionObserver' in window && !prefersReducedMotion) {
     revealElements.forEach(function (el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';

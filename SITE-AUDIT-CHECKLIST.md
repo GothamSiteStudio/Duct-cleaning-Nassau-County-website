@@ -35,7 +35,7 @@ This checklist is based on the audit Claude produced for this site, grouped into
 
 ## 3. Accessibility
 
-- [ ] Add a `prefers-reduced-motion` stylesheet path for users who disable motion.
+- [x] Add a `prefers-reduced-motion` stylesheet path for users who disable motion.
 - [ ] Fix heading hierarchy issues in the footer and any repeated sections.
 - [ ] Add stronger ARIA support to required fields and dynamic form feedback.
 - [ ] Add ARIA state handling to dropdown navigation.
